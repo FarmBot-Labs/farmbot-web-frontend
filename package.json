@@ -41,6 +41,7 @@
     "farmbot": "1.1.0",
     "joi-browser": "^8.0.5",
     "jquery": "^2.1.4",
+    "l20n": "^4.0.0-alpha.3",
     "lodash": "^3.10.1",
     "moment": "^2.13.0",
     "react": "^0.14.8",

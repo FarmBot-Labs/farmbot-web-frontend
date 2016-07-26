@@ -38,7 +38,7 @@ export class AxisInputBox extends React.Component<any, any> {
 
   render() {
     return  <div className="col-xs-3">
-              <label>{ this.props.label }</label>
+              <label data-l10n-id={ this.props.l10n }>{ this.props.label }</label>
               <input className="move-input"
                      type="text"
                      style={ this.style() }
@@ -99,6 +99,7 @@ class ControlsPage extends React.Component<any, any> {
                     <div className="row">
                       <div className="col-sm-12">
                         <button
+						  data-l10n-id="controls-move-button-stop"
                           className="red button-like widget-control"
                           type="button"
                           onClick={
@@ -109,9 +110,10 @@ class ControlsPage extends React.Component<any, any> {
 
                         </button>
                         <div className="widget-header">
-                          <h5>Move</h5>
+                          <h5 data-l10n-id="controls-move-header">Move</h5>
                           <i className="fa fa-question-circle widget-help-icon">
-                            <div className="widget-help-text">Use these manual
+                            <div data-l10n-id="controls-move-help"
+							     className="widget-help-text">Use these manual
                             control buttons to move FarmBot in realtime. Press the
                             arrows for relative movements or type in new
                             coordinates and press <strong>GO</strong> for an
@@ -123,7 +125,8 @@ class ControlsPage extends React.Component<any, any> {
                       </div>
                       <div className="col-sm-12">
                         <div className="widget-content">
-                          <label className="text-center">MOVE AMOUNT (mm)</label>
+                          <label data-l10n-id="controls-move-amount-mm"
+						         className="text-center">MOVE AMOUNT (mm)</label>
                           <div className="row">
                             <div className="col-sm-12">
                               <StepSizeSelector
@@ -197,11 +200,12 @@ class ControlsPage extends React.Component<any, any> {
                               </tbody></table>
                           </div>
                           <div className="row">
-                            <AxisInputBox axis="x" label="X AXIS" {...this.props} />
-                            <AxisInputBox axis="y" label="Y AXIS" {...this.props} />
-                            <AxisInputBox axis="z" label="Z AXIS" {...this.props} />
+                            <AxisInputBox axis="x" l10n="controls-move-axis-x-label" label="X AXIS" {...this.props} />
+                            <AxisInputBox axis="y" l10n="controls-move-axis-y-label" label="Y AXIS" {...this.props} />
+                            <AxisInputBox axis="z" l10n="controls-move-axis-z-label" label="Z AXIS" {...this.props} />
                             <div className="col-xs-3">
-                              <button className="full-width green button-like go"
+                              <button data-l10n-id="controls-move-button-submit"
+							          className="full-width green button-like go"
                                       onClick={ () => this.props.dispatch(commitAxisChanges()) } >
                                 GO
                               </button>
@@ -217,14 +221,16 @@ class ControlsPage extends React.Component<any, any> {
                     <div className="row">
                       <div className="col-sm-12">
                         <button
+						  data-l10n-id="controls-tools-button-edit"
                           className="gray button-like widget-control"
                           type="button">
                           EDIT
                         </button>
                         <div className="widget-header">
-                          <h5>Tools</h5>
+                          <h5 data-l10n-id="controls-tools-header">Tools</h5>
                           <i className="fa fa-question-circle widget-help-icon">
-                            <div className="widget-help-text">Use these toggle
+                            <div data-l10n-id="controls-tools-help"
+							     className="widget-help-text">Use these toggle
                             switches to control FarmBot's tools and peripherals
                             in realtime. To edit and create new tools, press
                             the <strong>EDIT</strong> button. Make sure to turn
@@ -237,10 +243,10 @@ class ControlsPage extends React.Component<any, any> {
                         <div className="widget-content no-bottom-padding">
                           <div className="row">
                             <div className="col-sm-4">
-                              <label>VACUUM PUMP</label>
+                              <label data-l10n-id="controls-tools-tool-vacuumPump">VACUUM PUMP</label>
                             </div>
                             <div className="col-sm-4">
-                              <p>Pin 9</p>
+                              <p data-l10n-id="controls-tools-pin">Pin 9</p>
                             </div>
                             <div className="col-sm-4">
                               <ToggleButton toggleval={ bot.hardware.pin9 }
@@ -251,10 +257,10 @@ class ControlsPage extends React.Component<any, any> {
                           </div>
                           <div className="row">
                             <div className="col-sm-4">
-                              <label>WATER VALVE</label>
+                              <label data-l10n-id="controls-tools-tool-waterValve">WATER VALVE</label>
                             </div>
                             <div className="col-sm-4">
-                              <p>Pin 10</p>
+                              <p data-l10n-id="controls-tools-pin">Pin 10</p>
                             </div>
                             <div className="col-sm-4">
                               <ToggleButton toggleval={ bot.hardware.pin10 }
@@ -265,10 +271,10 @@ class ControlsPage extends React.Component<any, any> {
                           </div>
                           <div className="row">
                             <div className="col-sm-4">
-                              <label>LED</label>
+                              <label data-l10n-id="controls-tools-tool-led">LED</label>
                             </div>
                             <div className="col-sm-4">
-                              <p>Pin 13</p>
+                              <p data-l10n-id="controls-tools-pin">Pin 13</p>
                             </div>
                             <div className="col-sm-4">
                               <ToggleButton toggleval={ bot.hardware.pin13 }
@@ -289,14 +295,16 @@ class ControlsPage extends React.Component<any, any> {
                     <div className="row">
                       <div className="col-sm-12">
                         <button
+						  data-l10n-id="controls-camera-url-button-edit"
                           className="gray button-like widget-control"
                           type="button">
                           EDIT
                         </button>
                         <div className="widget-header">
-                          <h5>Camera</h5>
+                          <h5 data-l10n-id="controls-camera-header">Camera</h5>
                           <i className="fa fa-question-circle widget-help-icon">
-                            <div className="widget-help-text">Press the <strong>EDIT
+                            <div data-l10n-id="controls-camera-help"
+							     className="widget-help-text">Press the <strong>EDIT
                             </strong> button to add the URL of a livestream of
                             your FarmBot. Coming soon: A working edit button and
                             the ability to save your webcam URL in the backend.</div>
@@ -308,7 +316,7 @@ class ControlsPage extends React.Component<any, any> {
                       <div className="col-sm-12">
                         <img className="webcam-stream" src={ url } />
                         <div>
-                        <label>Set Webcam URL:</label>
+                        <label data-l10n-id="controls-camera-url-label">Set Webcam URL:</label>
                         <input type="text"
                                onChange={ (e) => {
                                  return this.setState({url: e.target["value"] });

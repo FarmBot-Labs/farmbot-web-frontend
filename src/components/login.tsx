@@ -49,7 +49,7 @@ class LoginPage extends React.Component<any, any> {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="widget-header">
-                      <h5>Login</h5>
+                      <h5 data-l10n-id="login-header">Login</h5>
                     </div>
                   </div>
                 </div>
@@ -58,11 +58,11 @@ class LoginPage extends React.Component<any, any> {
                     <div className="col-sm-12">
                       <div className="widget-content">
                         <div className="input-group">
-                          <label>Email</label>
+                          <label data-l10n-id="login-email-label">Email</label>
                           <input type="text"
                                  onChange={ this.set("loginEmail").bind(this) }>
                           </input>
-                          <label>Password</label>
+                          <label data-l10n-id="login-password-label">Password</label>
                           <input type="password"
                                  onChange={ this.set("loginPassword").bind(this) }>
                           </input>
@@ -70,7 +70,8 @@ class LoginPage extends React.Component<any, any> {
                         <div className="row">
                           <div className="col-xs-6">
                             <p className="auth-link">
-                              <a href={
+                              <a data-l10n-id="login-password-reset"
+							     href={
                                   this.props.config.farmbotApiUrl + "/users/password/new"
                                 }>
                                 Reset password
@@ -78,14 +79,15 @@ class LoginPage extends React.Component<any, any> {
                             </p>
                           </div>
                           <div className="col-xs-6">
-                            <button className="button-like button green login">
+                            <button data-l10n-id="login-button-submit"
+							        className="button-like button green login">
                               Login
                             </button>
                           </div>
                         </div>
                         <div className="row">
                           <div className="col-xs-12">
-                          <label>Server URL (Advanced)</label>
+                          <label data-l10n-id="login-server-url-label">Server URL (Advanced)</label>
                           <input type="text"
                                  value={ this.props.config.farmbotApiUrl }
                                  onChange={ setUrl(this.props.dispatch) } />
@@ -104,7 +106,7 @@ class LoginPage extends React.Component<any, any> {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="widget-header">
-                      <h5>Create an Account</h5>
+                      <h5 data-l10n-id="register-header">Create an Account</h5>
                     </div>
                   </div>
                 </div>
@@ -113,15 +115,15 @@ class LoginPage extends React.Component<any, any> {
                     <form onSubmit={ this.submitRegistration.bind(this) } >
                       <div className="widget-content">
                         <div className="input-group">
-                          <label>Email</label>
+                          <label data-l10n-id="register-email-label">Email</label>
                           <input type="email" onChange={ this.set("regEmail").bind(this) } ></input>
-                          <label>Name</label>
+                          <label data-l10n-id="register-name-label">Name</label>
                           <input type="text" onChange={ this.set("regName").bind(this) }></input>
-                          <label>Password</label>
+                          <label data-l10n-id="register-password-label">Password</label>
                           <input type="password"
                                  onChange={ this.set("regPass").bind(this) }>
                           </input>
-                          <label>Verfy Password</label>
+                          <label data-l10n-id="register-password-verify-label">Verfy Password</label>
                           <input type="password"
                                  onChange={
                                    this.set("regConfirmation").bind(this) }>
@@ -132,7 +134,8 @@ class LoginPage extends React.Component<any, any> {
                           </div>
                           <div className="col-xs-6">
                             <div className="auth-button">
-                              <button className="button-like button green create-account">
+                              <button data-l10n-id="register-button-submit"
+							          className="button-like button green create-account">
                                 Create Account
                               </button>
                             </div>

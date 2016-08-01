@@ -31,14 +31,16 @@ export function SequencesList({sequences, dispatch}: SequencesListProps) {
               <div className="widget-wrapper sequences-widget">
                 <div className="row">
                   <div className="col-sm-12">
-                    <button className="green button-like widget-control"
+                    <button data-l10n-id="sequences-list-add"
+					        className="green button-like widget-control"
                             onClick={ () => dispatch(addSequence()) }>
                       Add
                     </button>
                     <div className="widget-header">
-                      <h5>Sequences</h5>
+                      <h5 data-l10n-id="sequences-list-header">Sequences</h5>
                       <i className="fa fa-question-circle widget-help-icon">
-                        <div className="widget-help-text">Here is the list of
+                        <div data-l10n-id="sequences-list-help"
+						     className="widget-help-text">Here is the list of
                         all of your sequences. Click one to edit. Coming soon:
                         sequence cloning and custom colors!</div>
                       </i>

@@ -107,22 +107,13 @@ export let stepTiles: StepDictionary = {
                 <div className="row">
                     <div className="col-sm-12">
                       <div className="step-header move-relative-step">
-                        <input className="step-label" placeholder="Move Relative"/>
+                        <input data-l10n-id="sequences-editor-step-label-move-rel" className="step-label" placeholder="Move Relative"/>
                         <i className="fa fa-arrows-v step-control" />
                         <i className="fa fa-clone step-control"
                            onClick={ () => copy({dispatch, step}) } />
                         <i className="fa fa-trash step-control"
                            onClick={ () => remove({dispatch, index}) } />
-                        <Help text="The Move Relative step instructs FarmBot to \
-                        move the specified distance from its current location. \
-                        For example, if FarmBot is currently at X=1000, Y=1000 \
-                        and it receives a Move Relative where X=0 and Y=3000, then \
-                        FarmBot will move to X=1000, Y=4000. If FarmBot must move in \
-                        multiple directions, it will move diagonally. If you \
-                        require straight movements along one axis at a time, use \
-                        multiple Move Relative steps. Move Relative steps should \
-                        be preceded by a Move Absolute step to ensure you are \
-                        starting from a known location." />
+                        <Help text="mdingena-test" />
                       </div>
                     </div>
                   </div>
@@ -131,28 +122,28 @@ export let stepTiles: StepDictionary = {
                       <div className="step-content move-relative-step">
                         <div className="row">
                           <div className="col-xs-6 col-md-3">
-                            <label>X (mm)</label>
+                            <label data-l10n-id="sequences-step-move-x">X (mm)</label>
                             <StepInputBox dispatch={dispatch}
                                           step={step}
                                           index={index}
                                           field="x"/>
                           </div>
                           <div className="col-xs-6 col-md-3">
-                            <label>Y (mm)</label>
+                            <label data-l10n-id="sequences-step-move-y">Y (mm)</label>
                             <StepInputBox dispatch={dispatch}
                                           step={step}
                                           index={index}
                                           field="y"/>
                           </div>
                           <div className="col-xs-6 col-md-3">
-                            <label>Z (mm)</label>
+                            <label data-l10n-id="sequences-step-move-z">Z (mm)</label>
                             <StepInputBox dispatch={dispatch}
                                           step={step}
                                           index={index}
                                           field="z"/>
                           </div>
                           <div className="col-xs-6 col-md-3">
-                            <label>Speed</label>
+                            <label data-l10n-id="sequences-step-move-speed">Speed</label>
                             <StepInputBox dispatch={dispatch}
                                           step={step}
                                           index={index}
@@ -171,7 +162,7 @@ export let stepTiles: StepDictionary = {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="step-header move-absolute-step">
-                      <input className="step-label" placeholder="Move Absolute"/>
+                      <input data-l10n-id="sequences-editor-step-label-move-abs" className="step-label" placeholder="Move Absolute"/>
                       <i className="fa fa-arrows-v step-control" />
                       <i className="fa fa-clone step-control"
                          onClick={ () => copy({dispatch, step}) } />
@@ -197,28 +188,28 @@ export let stepTiles: StepDictionary = {
                     <div className="step-content move-absolute-step">
                       <div className="row">
                         <div className="col-xs-6 col-md-3">
-                          <label>X (mm)</label>
+                          <label data-l10n-id="sequences-step-move-x">X (mm)</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="x"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Y (mm)</label>
+                          <label data-l10n-id="sequences-step-move-y">Y (mm)</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="y"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Z (mm)</label>
+                          <label data-l10n-id="sequences-step-move-z">Z (mm)</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="z"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Speed</label>
+                          <label data-l10n-id="sequences-step-move-speed">Speed</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
@@ -227,21 +218,21 @@ export let stepTiles: StepDictionary = {
                       </div>
                       <div className="row">
                         <div className="col-xs-6 col-md-3">
-                          <label>X-Offset (mm)</label>
+                          <label data-l10n-id="sequences-step-move-offset-x">X-Offset (mm)</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="stub"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Y-Offset (mm)</label>
+                          <label data-l10n-id="sequences-step-move-offset-y">Y-Offset (mm)</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="stub"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Z-Offset (mm)</label>
+                          <label data-l10n-id="sequences-step-move-offset-z">Z-Offset (mm)</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
@@ -260,7 +251,7 @@ export let stepTiles: StepDictionary = {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="step-header write-pin-step">
-                      <input placeholder="Write Pin"/>
+                      <input data-l10n-id="sequences-editor-step-label-pin-write" placeholder="Write Pin"/>
                       <i className="fa fa-arrows-v step-control" />
                       <i className="fa fa-clone step-control"
                          onClick={ () => copy({dispatch, step}) } />
@@ -278,21 +269,21 @@ export let stepTiles: StepDictionary = {
                     <div className="step-content write-pin-step">
                       <div className="row">
                         <div className="col-xs-6 col-md-3">
-                          <label>Pin Number</label>
+                          <label data-l10n-id="sequences-step-pin-id">Pin Number</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="pin"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Value</label>
+                          <label data-l10n-id="sequences-step-pin-value">Value</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="value"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Pin Mode</label>
+                          <label data-l10n-id="sequences-step-pin-mode">Pin Mode</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
@@ -312,7 +303,7 @@ export let stepTiles: StepDictionary = {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="step-header wait-step">
-                      <input className="step-label" placeholder="Wait"/>
+                      <input data-l10n-id="sequences-editor-step-label-wait" className="step-label" placeholder="Wait"/>
                       <i className="fa fa-arrows-v step-control" />
                       <i className="fa fa-clone step-control"
                          onClick={ () => copy({dispatch, step}) } />
@@ -329,7 +320,7 @@ export let stepTiles: StepDictionary = {
                     <div className="step-content wait-step">
                       <div className="row">
                         <div className="col-xs-6 col-md-3">
-                          <label>Time in milliseconds</label>
+                          <label data-l10n-id="sequences-step-wait-timeout">Time in milliseconds</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
@@ -349,7 +340,7 @@ export let stepTiles: StepDictionary = {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="step-header send-message-step">
-                      <input className="step-label" placeholder="Send Message"/>
+                      <input data-l10n-id="sequences-editor-step-label-message" className="step-label" placeholder="Send Message"/>
                       <i className="fa fa-arrows-v step-control" />
                       <i className="fa fa-clone step-control"
                          onClick={ () => copy({dispatch, step}) } />
@@ -367,7 +358,7 @@ export let stepTiles: StepDictionary = {
                     <div className="step-content send-message-step">
                       <div className="row">
                         <div className="col-xs-12">
-                          <label>Message</label>
+                          <label data-l10n-id="sequences-step-message-text">Message</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
@@ -387,7 +378,7 @@ export let stepTiles: StepDictionary = {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="step-header read-pin-step">
-                      <input className="step-label" placeholder="Read Pin"/>
+                      <input data-l10n-id="sequences-editor-step-label-pin-read" className="step-label" placeholder="Read Pin"/>
                       <i className="fa fa-arrows-v step-control" />
                       <i className="fa fa-clone step-control"
                          onClick={ () => copy({dispatch, step}) } />
@@ -405,14 +396,14 @@ export let stepTiles: StepDictionary = {
                     <div className="step-content read-pin-step">
                       <div className="row">
                         <div className="col-xs-6 col-md-3">
-                          <label>Pin Number</label>
+                          <label data-l10n-id="sequences-step-pin-id">Pin Number</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}
                                         field="pin"/>
                         </div>
                         <div className="col-xs-6 col-md-3">
-                          <label>Data Label</label>
+                          <label data-l10n-id="sequences-step-pin-data-label">Data Label</label>
                           <StepInputBox dispatch={dispatch}
                                         step={step}
                                         index={index}

@@ -62,8 +62,9 @@ interface RegimenItemDayGroupProps {
 function RegimenItemDayGroup({ day,
                                items,
                                dispatch }: RegimenItemDayGroupProps) {
+	var l10n = { dayNumber : day };
     return <div className="regimen-day">
-        <label>Day { day }</label>
+        <label data-l10n-id="regimens-editor-day" data-l10n-args={ JSON.stringify( l10n ) }>Day { day }</label>
         { items.map(function(item, inx) {
             return <RegimenItemStep item={ item }
                                     key={ inx }

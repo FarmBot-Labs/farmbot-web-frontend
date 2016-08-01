@@ -5,7 +5,8 @@ interface AddRegimenProps {
   dispatch: Function;
 }
 export function AddRegimen({dispatch}) {
-  return <button className="green button-like widget-control"
+  return <button data-l10n-id="regimens-list-add"
+                 className="green button-like widget-control"
                  onClick={ add(dispatch) }>
     Add
   </button>;

@@ -58,11 +58,11 @@ class LoginPage extends React.Component<any, any> {
                     <div className="col-sm-12">
                       <div className="widget-content">
                         <div className="input-group">
-                          <label data-l10n-id="login-email-label">Email</label>
+                          <label data-l10n-id="login-email">Email</label>
                           <input type="text"
                                  onChange={ this.set("loginEmail").bind(this) }>
                           </input>
-                          <label data-l10n-id="login-password-label">Password</label>
+                          <label data-l10n-id="login-password">Password</label>
                           <input type="password"
                                  onChange={ this.set("loginPassword").bind(this) }>
                           </input>
@@ -79,7 +79,7 @@ class LoginPage extends React.Component<any, any> {
                             </p>
                           </div>
                           <div className="col-xs-6">
-                            <button data-l10n-id="login-button-submit"
+                            <button data-l10n-id="login-submit"
 							        className="button-like button green login">
                               Login
                             </button>
@@ -87,7 +87,7 @@ class LoginPage extends React.Component<any, any> {
                         </div>
                         <div className="row">
                           <div className="col-xs-12">
-                          <label data-l10n-id="login-server-url-label">Server URL (Advanced)</label>
+                          <label data-l10n-id="login-server-url">Server URL (Advanced)</label>
                           <input type="text"
                                  value={ this.props.config.farmbotApiUrl }
                                  onChange={ setUrl(this.props.dispatch) } />
@@ -115,15 +115,15 @@ class LoginPage extends React.Component<any, any> {
                     <form onSubmit={ this.submitRegistration.bind(this) } >
                       <div className="widget-content">
                         <div className="input-group">
-                          <label data-l10n-id="register-email-label">Email</label>
+                          <label data-l10n-id="register-email">Email</label>
                           <input type="email" onChange={ this.set("regEmail").bind(this) } ></input>
-                          <label data-l10n-id="register-name-label">Name</label>
+                          <label data-l10n-id="register-name">Name</label>
                           <input type="text" onChange={ this.set("regName").bind(this) }></input>
-                          <label data-l10n-id="register-password-label">Password</label>
+                          <label data-l10n-id="register-password">Password</label>
                           <input type="password"
                                  onChange={ this.set("regPass").bind(this) }>
                           </input>
-                          <label data-l10n-id="register-password-verify-label">Verfy Password</label>
+                          <label data-l10n-id="register-password-verify">Verfy Password</label>
                           <input type="password"
                                  onChange={
                                    this.set("regConfirmation").bind(this) }>
@@ -134,7 +134,7 @@ class LoginPage extends React.Component<any, any> {
                           </div>
                           <div className="col-xs-6">
                             <div className="auth-button">
-                              <button data-l10n-id="register-button-submit"
+                              <button data-l10n-id="register-submit"
 							          className="button-like button green create-account">
                                 Create Account
                               </button>

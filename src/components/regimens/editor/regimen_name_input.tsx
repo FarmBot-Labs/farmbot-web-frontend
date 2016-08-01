@@ -10,7 +10,8 @@ function write({dispatch, regimen}: RegimenProps) {
 }
 
 export function RegimenNameInput({regimen, dispatch}: RegimenProps) {
-  return <input id="right-label"
+  return <input data-l10n-id="regimens-editor-name"
+                id="right-label"
                 placeholder="Regimen Name"
                 type="text"
                 onChange={ write({dispatch, regimen}) }

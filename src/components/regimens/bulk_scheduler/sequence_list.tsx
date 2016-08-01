@@ -8,7 +8,7 @@ interface SequenceListProps {
     dispatch: Function;
 }
 
-let NULL_ITEM = <SeqListItem s={{name: "Select Sequence"}} i={ -1 } key={ -1 } />;
+let NULL_ITEM = <SeqListItem s={{name: "Select Sequence", l10n: "regimens-scheduler-sequence-select"}} i={ -1 } key={ -1 } />;
 
 export function SequenceList({sequences,
                               current,
@@ -16,7 +16,7 @@ export function SequenceList({sequences,
     // Handles issue of [{}].indexOf({}) == -1.
     let selectedValue = current ? sequences.indexOf(_.findWhere(sequences, current)) : -1;
     return <div>
-        <label>Sequence</label>
+        <label data-l10n-id="regimens-scheduler-sequence-label">Sequence</label>
         <select value={ selectedValue }
                 onChange={ change(dispatch, sequences) }>
             { [NULL_ITEM]
@@ -27,7 +27,9 @@ export function SequenceList({sequences,
 }
 
 function SeqListItem({s, i}) {
-  return <option key={ i } value={ i }>
+  return <option data-l10n-id={ s.l10n }
+	             key={ i }
+				 value={ i }>
    { s.name }
   </option>;
 }

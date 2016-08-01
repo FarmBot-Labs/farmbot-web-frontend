@@ -28,9 +28,10 @@ export function StepButtonGroup({dispatch}) {
             <div className="row">
                 <div className="col-sm-12">
                     <div className="widget-header">
-                        <h5>Commands</h5>
+                        <h5 data-l10n-id="sequences-commands-header">Commands</h5>
                         <i className="fa fa-question-circle widget-help-icon">
-                          <div className="widget-help-text">These commands are
+                          <div data-l10n-id="sequences-commands-help"
+						       className="widget-help-text">These commands are
                           the most basic things FarmBot can do. Combine them into
                           sequences to create more complex operations for
                           watering, planting seeds, measuring soil properties,
@@ -45,7 +46,8 @@ export function StepButtonGroup({dispatch}) {
                         <div className="row">
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-move-abs"
+									        className=
                                         "full-width text-left blue-block block-header block"
                                         onClick={ clickToAdd(step("move_absolute")) }>
                                         MOVE ABSOLUTE
@@ -55,7 +57,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-move-rel"
+									        className=
                                         "full-width text-left green-block block-header block"
                                         onClick={ clickToAdd(step("move_relative")) }>
                                         MOVE RELATIVE
@@ -65,7 +68,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-pin-write"
+									        className=
                                         "full-width text-left orange-block block-header block"
                                         onClick={ clickToAdd(step("pin_write")) }>
                                         WRITE PIN
@@ -75,7 +79,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-pin-read"
+									        className=
                                         "full-width text-left yellow-block block-header block"
                                         onClick={ clickToAdd(step("read_pin")) }>
                                         READ PIN
@@ -85,7 +90,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-wait"
+									        className=
                                         "full-width text-left brown-block block-header block"
                                         onClick={ clickToAdd(step("wait")) }>
                                         WAIT
@@ -95,7 +101,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className="full-width text-left red-block block-header"
+                                    <button data-l10n-id="sequences-commands-message"
+									        className="full-width text-left red-block block-header"
                                         onClick={ clickToAdd(step("send_message")) }>
                                         SEND MESSAGE
                                         <i className="fa fa-arrows block-control" />
@@ -104,7 +111,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-if"
+									        className=
                                         "full-width text-left purple-block block-header block"
                                         onClick={ clickToAdd(step("if_statement")) }>
                                         IF STATEMENT <Help text="Coming soon" />
@@ -114,7 +122,8 @@ export function StepButtonGroup({dispatch}) {
                             </div>
                             <div className="col-xs-6">
                                 <div className="block-wrapper">
-                                    <button className=
+                                    <button data-l10n-id="sequences-commands-execute"
+									        className=
                                         "full-width text-left gray-block block-header block"
                                         onClick={ temporaryHack }>
                                         EXECUTE

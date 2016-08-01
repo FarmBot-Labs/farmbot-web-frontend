@@ -8,7 +8,8 @@ function remove({regimen, dispatch}: RegimenProps) {
 
 export function DeleteButton({regimen, dispatch}: RegimenProps) {
   if (!regimen) { return <span /> };
-  return <button className="red button-like widget-control"
+  return <button data-l10n-id="regimens-editor-delete"
+                 className="red button-like widget-control"
                  onClick={ remove({dispatch, regimen}) }>
           Delete
         </button>;

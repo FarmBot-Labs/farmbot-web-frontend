@@ -13,13 +13,14 @@ export class Help extends React.Component<HelpProps, HelpState> {
   /** The output of this function is what the user will see when the
       Help icon is hovered over. */
   isHovered({text}) {
-    return <div className="help-text"> { text } </div>;
+    return <div data-l10n-id={ text } className="help-text"></div>;
   }
 
   /** This is what the user sees when the icon is not hovered over. */
   notHovered(props: HelpProps) {
     // We probably don't need to show anything when not hovered.
     // SEE: render(); for default stuff.
+	// mdingena: We probably *should* because L20n is not localizing the non-existent text otherwise.
     return <div></div>;
   }
 

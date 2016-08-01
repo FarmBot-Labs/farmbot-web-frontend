@@ -51,22 +51,26 @@ export function SequenceEditorWidget({sequences, dispatch, auth}) {
         <div className="widget-wrapper">
             <div className="row">
                 <div className="col-sm-12">
-                    <button className="green button-like widget-control"
+                    <button data-l10n-id={ "sequences-editor-save" + ( sequence.dirty ? "-dirty" : "" ) }
+					        className="green button-like widget-control"
                         onClick={ save(dispatch, sequence, token) }>
                         Save { sequence.dirty ? " *" : "" }
                     </button>
-                    <button className="yellow button-like widget-control"
+                    <button data-l10n-id="sequences-editor-test"
+					        className="yellow button-like widget-control"
                             onClick={ performSeq(dispatch, sequence) }>
                         Test
                     </button>
-                    <button className="red button-like widget-control"
+                    <button data-l10n-id="sequences-editor-delete"
+					        className="red button-like widget-control"
                         onClick={ destroy(dispatch, sequence, token, inx) }>
                         Delete
                     </button>
                     <div className="widget-header">
-                      <h5>Sequence Editor</h5>
+                      <h5 data-l10n-id="sequences-editor-header">Sequence Editor</h5>
                       <i className="fa fa-question-circle widget-help-icon">
-                        <div className="widget-help-text">Use this widget to edit
+                        <div data-l10n-id="sequences-editor-help"
+					         className="widget-help-text">Use this widget to edit
                         sequences. Coming soon: drag and drop steps,
                         custom step names, sequence cloning, and inheritable
                         step properties!</div>
@@ -77,7 +81,8 @@ export function SequenceEditorWidget({sequences, dispatch, auth}) {
             <div className="row">
                 <div className="col-sm-12">
                     <div className="widget-content no-bottom-padding">
-                        <input placeholder="Sequence Name"
+                        <input data-l10n-id="sequences-editor-name"
+						    placeholder="Sequence Name"
                             value={ sequence.name }
                             onChange={ handleNameUpdate(dispatch) }
                             type="text" />
@@ -86,7 +91,7 @@ export function SequenceEditorWidget({sequences, dispatch, auth}) {
                                     sequences={ sequences.all } /> }
                         <div className="row">
                             <div className="col-sm-12">
-                                <div className="drag-drop-area padding">DRAG ACTIONS HERE</div>
+                                <div data-l10n-id="sequences-editor-landing-zone" className="drag-drop-area padding">DRAG ACTIONS HERE</div>
                             </div>
                         </div>
                     </div>

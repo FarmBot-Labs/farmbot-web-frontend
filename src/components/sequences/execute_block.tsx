@@ -52,7 +52,8 @@ function SequenceSelectBox({dispatch,
     let subSeq = _.find(eligibleSequences, (s) => s._id === ssid) || {};
     return <select onChange={ change }
         value={ subSeq["_id"] || "" }>
-        <option value="">Pick a sequence (or save a new one) </option>
+        <option data-l10n-id="sequences-step-execute-sequence-placeholder"
+		        value="">Pick a sequence (or save a new one) </option>
         { choices }
     </select>;
 }
@@ -66,7 +67,7 @@ export function ExecuteBlock({dispatch, step, index, sequence, sequences}: StepP
             <div className="row">
                 <div className="col-sm-12">
                     <div className="step-header execute-step">
-                        <input className="step-label" placeholder="Execute"/>
+                        <input data-l10n-id="sequences-editor-step-label-execute" className="step-label" placeholder="Execute"/>
                         <i className="fa fa-arrows-v step-control" />
                         <i className="fa fa-clone step-control"
                             onClick={ () => copy({ dispatch, step }) } />
@@ -80,7 +81,7 @@ export function ExecuteBlock({dispatch, step, index, sequence, sequences}: StepP
                     <div className="step-content execute-step">
                         <div className="row">
                             <div className="col-xs-12">
-                                <label>Sequence</label>
+                                <label data-l10n-id="sequences-step-execute-sequence">Sequence</label>
                                 <SequenceSelectBox dispatch={dispatch}
                                     step={step}
                                     sequence={sequence}

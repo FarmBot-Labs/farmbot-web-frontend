@@ -7,6 +7,6 @@ interface EmptyEditorProps {
     actually edit). */
 export function EmptyEditor({}: EmptyEditorProps) {
     return <div>
-        <p> Please click "Add" to start editing a regimen. </p>
+        <p data-l10n-id="regimens-editor-empty"> Please click "Add" to start editing a regimen. </p>
     </div>;
 }

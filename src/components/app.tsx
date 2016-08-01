@@ -1,5 +1,5 @@
 import * as React from "react";
-require('../../node_modules/l20n/dist/bundle/web/l20n');
+import 'l20n/dist/bundle/web/l20n';
 
 // The default template for the whole app. We're not doing much with it.
 // TODO: Maybe put the navbar in here?

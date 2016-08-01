@@ -10,8 +10,9 @@ export function Ticker({ ticker }: TickerParams) {
   style.background = ticker.color || "gray";
   return <div className="status-ticker-wrapper">
     <div className="status-ticker-light" style={style} />
-    <label className="status-ticker-message">
-      { ticker.message || "Loading" }
+    <label data-l10n-id={ "ticker-" + ticker.message }
+	       className="status-ticker-message">
+      Loading
     </label>
   </div>;
 };

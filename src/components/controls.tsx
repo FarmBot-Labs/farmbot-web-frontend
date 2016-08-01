@@ -99,7 +99,7 @@ class ControlsPage extends React.Component<any, any> {
                     <div className="row">
                       <div className="col-sm-12">
                         <button
-						  data-l10n-id="controls-move-button-stop"
+						  data-l10n-id="controls-move-e-stop"
                           className="red button-like widget-control"
                           type="button"
                           onClick={
@@ -125,7 +125,7 @@ class ControlsPage extends React.Component<any, any> {
                       </div>
                       <div className="col-sm-12">
                         <div className="widget-content">
-                          <label data-l10n-id="controls-move-amount-mm"
+                          <label data-l10n-id="controls-move-amount"
 						         className="text-center">MOVE AMOUNT (mm)</label>
                           <div className="row">
                             <div className="col-sm-12">
@@ -200,11 +200,11 @@ class ControlsPage extends React.Component<any, any> {
                               </tbody></table>
                           </div>
                           <div className="row">
-                            <AxisInputBox axis="x" l10n="controls-move-axis-x-label" label="X AXIS" {...this.props} />
-                            <AxisInputBox axis="y" l10n="controls-move-axis-y-label" label="Y AXIS" {...this.props} />
-                            <AxisInputBox axis="z" l10n="controls-move-axis-z-label" label="Z AXIS" {...this.props} />
+                            <AxisInputBox axis="x" l10n="controls-move-axis-x" label="X AXIS" {...this.props} />
+                            <AxisInputBox axis="y" l10n="controls-move-axis-y" label="Y AXIS" {...this.props} />
+                            <AxisInputBox axis="z" l10n="controls-move-axis-z" label="Z AXIS" {...this.props} />
                             <div className="col-xs-3">
-                              <button data-l10n-id="controls-move-button-submit"
+                              <button data-l10n-id="controls-move-go"
 							          className="full-width green button-like go"
                                       onClick={ () => this.props.dispatch(commitAxisChanges()) } >
                                 GO
@@ -221,7 +221,7 @@ class ControlsPage extends React.Component<any, any> {
                     <div className="row">
                       <div className="col-sm-12">
                         <button
-						  data-l10n-id="controls-tools-button-edit"
+						  data-l10n-id="controls-tools-edit"
                           className="gray button-like widget-control"
                           type="button">
                           EDIT
@@ -243,10 +243,10 @@ class ControlsPage extends React.Component<any, any> {
                         <div className="widget-content no-bottom-padding">
                           <div className="row">
                             <div className="col-sm-4">
-                              <label data-l10n-id="controls-tools-tool-vacuumPump">VACUUM PUMP</label>
+                              <label data-l10n-id="controls-tools-tool-vacuum_pump">VACUUM PUMP</label>
                             </div>
                             <div className="col-sm-4">
-                              <p data-l10n-id="controls-tools-pin">Pin 9</p>
+                              <p data-l10n-id="controls-tools-pin" data-l10n-args='{ "pinId" : 9 }'>Pin 9</p>
                             </div>
                             <div className="col-sm-4">
                               <ToggleButton toggleval={ bot.hardware.pin9 }
@@ -257,10 +257,10 @@ class ControlsPage extends React.Component<any, any> {
                           </div>
                           <div className="row">
                             <div className="col-sm-4">
-                              <label data-l10n-id="controls-tools-tool-waterValve">WATER VALVE</label>
+                              <label data-l10n-id="controls-tools-tool-water_valve">WATER VALVE</label>
                             </div>
                             <div className="col-sm-4">
-                              <p data-l10n-id="controls-tools-pin">Pin 10</p>
+                              <p data-l10n-id="controls-tools-pin" data-l10n-args='{ "pinId" : 10 }'>Pin 10</p>
                             </div>
                             <div className="col-sm-4">
                               <ToggleButton toggleval={ bot.hardware.pin10 }
@@ -274,7 +274,7 @@ class ControlsPage extends React.Component<any, any> {
                               <label data-l10n-id="controls-tools-tool-led">LED</label>
                             </div>
                             <div className="col-sm-4">
-                              <p data-l10n-id="controls-tools-pin">Pin 13</p>
+                              <p data-l10n-id="controls-tools-pin" data-l10n-args='{ "pinId" : 13 }'>Pin 13</p>
                             </div>
                             <div className="col-sm-4">
                               <ToggleButton toggleval={ bot.hardware.pin13 }
@@ -295,7 +295,7 @@ class ControlsPage extends React.Component<any, any> {
                     <div className="row">
                       <div className="col-sm-12">
                         <button
-						  data-l10n-id="controls-camera-url-button-edit"
+						  data-l10n-id="controls-camera-edit"
                           className="gray button-like widget-control"
                           type="button">
                           EDIT
@@ -316,7 +316,7 @@ class ControlsPage extends React.Component<any, any> {
                       <div className="col-sm-12">
                         <img className="webcam-stream" src={ url } />
                         <div>
-                        <label data-l10n-id="controls-camera-url-label">Set Webcam URL:</label>
+                        <label data-l10n-id="controls-camera-url">Set Webcam URL:</label>
                         <input type="text"
                                onChange={ (e) => {
                                  return this.setState({url: e.target["value"] });

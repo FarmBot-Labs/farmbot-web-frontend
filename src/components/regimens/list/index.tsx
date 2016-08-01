@@ -9,7 +9,8 @@ export function RegimensList(props: ReduxStateAtom) {
                 <div className="row">
                   <div className="col-sm-12">
                     <div className="main-nav-button">
-                      <button className="navbar-toggle hidden-sm hidden-md hidden-lg"
+                      <button data-l10n-id="regimens-list-header"
+					          className="navbar-toggle hidden-sm hidden-md hidden-lg"
                               data-target="#navbar"
                               data-toggle="collapse"
                               type="button">
@@ -18,9 +19,10 @@ export function RegimensList(props: ReduxStateAtom) {
                     </div>
                     <AddRegimen dispatch={ props.dispatch }/>
                     <div className="widget-header">
-                      <h5>Regimens</h5>
+                      <h5 data-l10n-id="regimens-list-header">Regimens</h5>
                       <i className="fa fa-question-circle widget-help-icon">
-                        <div className="widget-help-text">This is a list of all
+                        <div data-l10n-id="regimens-list-help"
+						     className="widget-help-text">This is a list of all
                         of your regimens. Coming soon: Regimens, and regimen cloning!</div>
                       </i>
                     </div>

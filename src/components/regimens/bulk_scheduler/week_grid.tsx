@@ -12,7 +12,8 @@ export function WeekGrid({weeks, dispatch}: WeekGridProps) {
     return <div>
         <div className="row">
             <div className="col-sm-12">
-                <label className="center margin-top margin-left">Days</label>
+                <label data-l10n-id="regimens-scheduler-days"
+				       className="center margin-top margin-left">Days</label>
                 { weeks.map(function(week, i) {
                   return <WeekRow key={i} index={i} week={week} dispatch={ dispatch }/>;
                 }) }
@@ -22,11 +23,11 @@ export function WeekGrid({weeks, dispatch}: WeekGridProps) {
             <div className="col-sm-12">
             <button className="green button-like left widget-control"
                     onClick={ () => dispatch(pushWeek()) }>
-              <i className="fa fa-plus" /> Week
+              <i className="fa fa-plus" /> <span data-l10n-id="regimens-scheduler-week-button">Week</span>
             </button>
             <button className="red button-like left widget-control"
                     onClick={ () => dispatch(popWeek()) }>
-              <i className="fa fa-minus" /> Week
+              <i className="fa fa-minus" /> <span data-l10n-id="regimens-scheduler-week-button">Week</span>
             </button>
             </div>
         </div>

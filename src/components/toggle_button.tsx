@@ -2,14 +2,14 @@ import * as React from "react";
 
 export class ToggleButton extends React.Component<any, any> {
   caption() {
-    let captions = {
-      "0":         "no",
-      "false":     "no",
-      "off":       "no",
-      "1":         "yes",
-      "true":      "yes",
-      "on":        "yes",
-      "undefined": "---"
+    let captions = {                // moved to L20n
+      "0":         "CAPTION_zero",	//"no",
+      "false":     "CAPTION_false",	//"no",
+      "off":       "CAPTION_off",   //"no",
+      "1":         "CAPTION_one",   //"yes",
+      "true":      "CAPTION_true",  //"yes",
+      "on":        "CAPTION_on",    //"yes",
+      "undefined": "CAPTION_undef"  //"---"
     };
 
     return captions[String(this.props.toggleval)] || "---";
@@ -34,7 +34,8 @@ export class ToggleButton extends React.Component<any, any> {
   }
 
   render() {
-    return <button className={ this.css() }
+    return <button data-l10n-id={ this.caption() }
+	               className={ this.css() }
                    onClick={ this.props.toggleAction }> { this.caption() }</button>;
   }
 }

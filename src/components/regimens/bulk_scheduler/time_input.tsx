@@ -46,7 +46,7 @@ export class TimeInput extends React.Component<TimeInputProps, any> {
 
   render() {
     return <div>
-      <label>Time</label>
+      <label data-l10n-id="regimens-scheduler-time">Time</label>
       <input onFocus={ this.focus.bind(this) }
              value={ this.value }
              onChange={ (event) => {

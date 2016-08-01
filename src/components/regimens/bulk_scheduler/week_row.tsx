@@ -11,8 +11,9 @@ interface WeekRowProps {
 let DAYS = [ 1, 2, 3, 4, 5, 6, 7 ];
 
 export function WeekRow({index, dispatch, week}: WeekRowProps) {
+  var l10n = { weekNumber : ( index + 1 ) };
   return <div className="week-row">
-            <label className="week-label">Week { index + 1 }</label>
+            <label data-l10n-id="regimens-scheduler-week-row" data-l10n-args={ JSON.stringify( l10n ) } className="week-label">Week { index + 1 }</label>
             {
               DAYS.map(function(day) {
                 let id = `${index}-${day}`;

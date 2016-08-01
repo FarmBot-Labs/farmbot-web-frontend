@@ -8,7 +8,8 @@ function save({regimen, dispatch}: RegimenProps) {
 
 export function SaveButton({regimen, dispatch}: RegimenProps) {
   if (!regimen) { return <span /> };
-  return <button className="green button-like widget-control"
+  return <button data-l10n-id={ "regimens-editor-save" + ( regimen.dirty ? "-dirty" : "" ) }
+                 className="green button-like widget-control"
                  onClick={ save({dispatch, regimen}) }>
     Save { regimen.dirty ? "*" : "" }
   </button>;

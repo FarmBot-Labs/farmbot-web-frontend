@@ -20,9 +20,10 @@ export function RegimenEditorWidget({regimens, dispatch}: RegimenEditorWidgetPro
                     <SaveButton regimen={ regimen } dispatch={ dispatch } />
                     <DeleteButton regimen={ regimen } dispatch={ dispatch } />
                     <div className="widget-header">
-                      <h5>Regimen Editor</h5>
+                      <h5 data-l10n-id="regimens-editor-header">Regimen Editor</h5>
                       <i className="fa fa-question-circle widget-help-icon">
-                        <div className="widget-help-text">Regimens allow FarmBot
+                        <div data-l10n-id="regimens-editor-help"
+						     className="widget-help-text">Regimens allow FarmBot
                         to take care of a plant throughout its entire life. A
                         regimen consists of many sequences that are scheduled to run
                         based on the age of the plant. Regimens are applied to

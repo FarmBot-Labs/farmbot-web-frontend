@@ -115,7 +115,7 @@ export function StepButtonGroup({dispatch}) {
 									        className=
                                         "full-width text-left purple-block block-header block"
                                         onClick={ clickToAdd(step("if_statement")) }>
-                                        IF STATEMENT <Help text="Coming soon" />
+                                        IF STATEMENT <Help text="Coming soon" />// TODO: needs localization
                                         <i className="fa fa-arrows block-control" />
                                     </button>
                                 </div>

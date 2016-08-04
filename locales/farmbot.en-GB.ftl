@@ -158,16 +158,59 @@ sequences-editor-landing-zone = Drag commands here
 
 sequences-editor-step-label-move-abs  =
   [html/placeholder]                    { sequences-commands-move-abs }
+sequences-editor-step-help-move-abs   =
+  | The { sequences-commands-move-abs } step instructs FarmBot to
+  | move to the specified coordinate regardless of the current
+  | position. For example, if FarmBot is currently at X=100,
+  | Y=100 and it receives a { sequences-commands-move-abs } where X=0 and Y=300,
+  | then FarmBot will move to X=0, Y=300. If FarmBot must move in
+  | multiple directions, it will move diagonally. If you
+  | require straight movements along one axis at a time,
+  | use multiple { sequences-commands-move-abs } steps. Coming soon: Offsets
+  | allow you to more easily instruct FarmBot to move to a
+  | location, but offset from it by the specified amount. For
+  | example moving to just above where a tool is located. Using
+  | offsets lets FarmBot do the math for you.
 sequences-editor-step-label-move-rel  =
   [html/placeholder]                    { sequences-commands-move-rel }
+sequences-editor-step-help-move-rel   =
+  | The { sequences-commands-move-rel } step instructs FarmBot to
+  | move the specified distance from its current location.
+  | For example, if FarmBot is currently at X=100, Y=100
+  | and it receives a { sequences-commands-move-rel } where X=-40 and Y=300, then
+  | FarmBot will move to X=60, Y=400. If FarmBot must move in
+  | multiple directions, it will move diagonally. If you
+  | require straight movements along one axis at a time, use
+  | multiple { sequences-commands-move-rel } steps. { sequences-commands-move-rel } steps should
+  | be preceded by a { sequences-commands-move-abs } step to ensure you are
+  | starting from a known location.
 sequences-editor-step-label-pin-write =
   [html/placeholder]                    { sequences-commands-pin-write }
+sequences-editor-step-help-pin-write  =
+  | The { sequences-commands-pin-write } step instructs FarmBot to
+  | set the specified pin on the Arduino to the specified mode
+  | and value. A { sequences-step-pin-mode } of 0 is for on/off control, while
+  | a { sequences-step-pin-mode } of 1 is for PWM (pulse width modulation).
 sequences-editor-step-label-pin-read  =
   [html/placeholder]                    { sequences-commands-pin-read }
+sequences-editor-step-help-pin-read   =
+  | The { sequences-commands-pin-read } step instructs FarmBot to
+  | read the current value of the specified pin.
+  | Coming soon: This data point is given the label you specified
+  | and then stored in your web app account to be later viewed.
 sequences-editor-step-label-wait      =
   [html/placeholder]                    { sequences-commands-wait }
+sequences-editor-step-help-wait       =
+  | The { sequences-commands-wait } step instructs FarmBot to wait for the
+  | specified amount of time. Use it in combination with the
+  | { sequences-commands-pin-write } step to water for a length of time.
 sequences-editor-step-label-message   =
   [html/placeholder]                    { sequences-commands-message }
+sequences-editor-step-help-message    =
+  | The { sequences-commands-message } step instructs FarmBot to
+  | send a custom message to the logs. This can help you with
+  | debugging your sequences. Eventually you will be able to
+  | receive push notifications and email alerts of these messages!
 sequences-editor-step-label-if        =
   [html/placeholder]                    { sequences-commands-if }
 sequences-editor-step-label-execute   =

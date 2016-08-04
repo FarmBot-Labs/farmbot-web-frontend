@@ -159,16 +159,69 @@ sequences-editor-landing-zone = Sleep commando's hier
 
 sequences-editor-step-label-move-abs  =
   [html/placeholder]                    { sequences-commands-move-abs }
+sequences-editor-step-help-move-abs   =
+  | Het { sequences-commands-move-abs } commando instrueert FarmBot om naar
+  | de gespecificeerde coördinaten te verplaatsen ongeacht de
+  | huidige positie. Bijvoorbeeld, als FarmBot zich momenteel
+  | op X=100, Y=100 bevindt en een { sequences-commands-move-abs } commando
+  | ontvangt met X=0 en Y=300, dan zal FarmBot zich verplaatsen
+  | naar X=0 en Y=300. Als FarmBot zich in beide assen moet
+  | verplaatsen, dan gebeurt dit diagonaal. Indien u wenst dat
+  | FarmBot zich op slechts één as per beweging verplaatst,
+  | gebruik dan meerdere { sequences-commands-move-abs } commando's.
+  | Binnenkort: As-compensaties stellen u in staat FarmBot te
+  | verplaatsen naar een bepaalde positie, maar deze met een
+  | gespecificeerde compensatie te wijzigen. Bijvoorbeeld,
+  | u specificeerd de locatie van een koppelstuk, en compenseert
+  | FarmBot zodat hij vlak boven het koppelstuk uitkomt in plaats
+  | van erin. Dankzij as-compensatie laat u FarmBot het rekenwerk
+  | voor u doen.
 sequences-editor-step-label-move-rel  =
   [html/placeholder]                    { sequences-commands-move-rel }
+sequences-editor-step-help-move-rel   =
+  | Het { sequences-commands-move-rel } commando instrueert FarmBot om de
+  | gespecificeerde afstand vanaf de huidige coördinaten te
+  | verplaatsen. Bijvoorbeeld, als FarmBot zich momenteel op
+  | X=100, Y=100 bevindt en een { sequences-commands-move-rel } commando
+  | ontvangt met X=-40 en Y=300, dan zal FarmBot zich verplaatsen
+  | naar X=60 en Y=400. Als FarmBot zich in beide assen moet
+  | verplaatsen, dan gebeurt dit diagonaal. Indien u wenst dat
+  | FarmBot zich op slechts één as per beweging verplaatst,
+  | gebruik dan meerdere { sequences-commands-move-rel } commando's.
+  | Verplaats Relatief commando's behoren vooraf te worden gegaan
+  | met een { sequences-commands-move-abs } commando om u te verzekeren dat
+  | FarmBot vanaf een bekende absolute positie begint.
 sequences-editor-step-label-pin-write =
   [html/placeholder]                    { sequences-commands-pin-write }
+sequences-editor-step-help-pin-write  =
+  | Het { sequences-commands-pin-write } commando instrueert FarmBot om de
+  | gespecificeerde pin op de Arduino in te stellen naar
+  | de opgegeven modus en waarde. Een sequences-step-pin-mode van 0 is
+  | voor aan/uit controle, en een sequences-step-pin-mode van 1 is voor
+  | PWM (pulse width modulation), ofwel pulsbreedtemodulatie.
 sequences-editor-step-label-pin-read  =
   [html/placeholder]                    { sequences-commands-pin-read }
+sequences-editor-step-help-pin-read   =
+  | Het { sequences-commands-pin-read } commando instrueert FarmBot om de waarde
+  | van de gespecificeerde pin uit te lezen.
+  | Binnenkort: U geeft dit datapunt een label dat wordt
+  | opgeslagen in uw account en dat u later weer kunt
+  | opvragen.
 sequences-editor-step-label-wait      =
   [html/placeholder]                    { sequences-commands-wait }
+sequences-editor-step-help-wait       =
+  | Het Wacht commando instrueert FarmBot om gedurende
+  | de wachtperiode niets te doen. Gebruik dit in
+  | combinatie met het { sequences-commands-pin-write } commando om voor
+  | een bepaalde tijdsduur water te geven.
 sequences-editor-step-label-message   =
   [html/placeholder]                    { sequences-commands-message }
+sequences-editor-step-help-message    =
+  | Het { sequences-commands-message } commando instrueert FarmBot om een
+  | instelbaar bericht naar de logs te sturen. Dit kan u
+  | helpen met het debuggen van uw instructiesets. Op den
+  | duurt zult u in staat zijn om push berichten en emails
+  | van uw FarmBot te ontvangen!
 sequences-editor-step-label-if        =
   [html/placeholder]                    { sequences-commands-if }
 sequences-editor-step-label-execute   =

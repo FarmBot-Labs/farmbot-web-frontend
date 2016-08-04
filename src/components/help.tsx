@@ -20,7 +20,6 @@ export class Help extends React.Component<HelpProps, HelpState> {
   notHovered(props: HelpProps) {
     // We probably don't need to show anything when not hovered.
     // SEE: render(); for default stuff.
-	// mdingena: We probably *should* because L20n is not localizing the non-existent text otherwise.
     return <div></div>;
   }
 

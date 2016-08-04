@@ -82,7 +82,7 @@ interface StepDictionary {
 };
 
 let Pending = ({ dispatch, index }: StepParams) => {
-  return <div>
+  return <div>// TODO: need localization
               <Help text="Not done yet :(" />
               Coming soon!
               Delete: <i className="fa fa-trash step-control"
@@ -113,7 +113,7 @@ export let stepTiles: StepDictionary = {
                            onClick={ () => copy({dispatch, step}) } />
                         <i className="fa fa-trash step-control"
                            onClick={ () => remove({dispatch, index}) } />
-                        <Help text="mdingena-test" />
+                        <Help text="sequences-editor-step-help-move-rel" />
                       </div>
                     </div>
                   </div>
@@ -168,18 +168,7 @@ export let stepTiles: StepDictionary = {
                          onClick={ () => copy({dispatch, step}) } />
                       <i className="fa fa-trash step-control"
                          onClick={ () => remove({dispatch, index}) } />
-                      <Help text="The Move Absolute step instructs FarmBot to \
-                      move to the specified coordinate regardless of the current \
-                      position. For example, if FarmBot is currently at X=1000, \
-                      Y=1000 and it receives a Move Absolute where X=0 and Y=3000, \
-                      then FarmBot will move to X=0, Y=3000. If FarmBot must move in \
-                      multiple directions, it will move diagonally. If you \
-                      require straight movements along one axis at a time, \
-                      use multiple Move Absolute steps. Coming soon: Offsets \
-                      allow you to more easily instruct FarmBot to move to a \
-                      location, but offset from it by the specified amount. For \
-                      example moving to just above where a tool is located. Using \
-                      offsets lets FarmBot do the math for you." />
+                      <Help text="sequences-editor-step-help-move-abs" />
                     </div>
                   </div>
                 </div>
@@ -257,10 +246,7 @@ export let stepTiles: StepDictionary = {
                          onClick={ () => copy({dispatch, step}) } />
                       <i className="fa fa-trash step-control"
                          onClick={ () => remove({dispatch, index}) } />
-                      <Help text="The Write Pin step instructs FarmBot to \
-                      set the specified pin on the Arduino to the specified mode \
-                      and value. A Pin Mode of 0 is for on/off control, while \
-                      a Pin Mode of 1 is for PWM (pulse width modulation)." />
+                      <Help text="sequences-editor-step-help-pin-write" />
                     </div>
                   </div>
                 </div>
@@ -309,9 +295,7 @@ export let stepTiles: StepDictionary = {
                          onClick={ () => copy({dispatch, step}) } />
                       <i className="fa fa-trash step-control"
                          onClick={ () => remove({dispatch, index}) } />
-                      <Help text="The Wait step instructs FarmBot to wait for the \
-                      specified amount of time. Use it in combination with the \
-                      Pin Write step to water for a length of time." />
+                      <Help text="sequences-editor-step-help-wait" />
                     </div>
                   </div>
                 </div>
@@ -346,10 +330,7 @@ export let stepTiles: StepDictionary = {
                          onClick={ () => copy({dispatch, step}) } />
                       <i className="fa fa-trash step-control"
                          onClick={ () => remove({dispatch, index}) } />
-                      <Help text="The Send Message step instructs FarmBot to \
-                      send a custom message to the logs. This can help you with \
-                      debugging your sequences. Eventually you will be able to \
-                      receive push notifications and email alerts of these messages!" />
+                      <Help text="sequences-editor-step-help-message" />
                     </div>
                   </div>
                 </div>
@@ -384,10 +365,7 @@ export let stepTiles: StepDictionary = {
                          onClick={ () => copy({dispatch, step}) } />
                       <i className="fa fa-trash step-control"
                          onClick={ () => remove({dispatch, index}) } />
-                      <Help text="The Read Pin step instructs FarmBot to \
-                      read the current value of the specified pin. Coming soon: \
-                      This data point is given the label you specified and then \
-                      stored in your web app account to be later viewed" />
+                      <Help text="sequences-editor-step-help-pin-read" />
                     </div>
                   </div>
                 </div>

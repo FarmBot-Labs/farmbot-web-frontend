@@ -126,7 +126,7 @@ export function saveSequence(sequence: Sequence) {
     return method(url, sequence, authHeaders(token))
     .then(function(resp: {data: Sequence; }) {
       let seq: Sequence = resp.data;
-      success(["success-m-SAVE_SEQUENCE_OK", {sequenceName: seq.name}]);
+      success(["success-m-SAVE_SEQUENCE_OK", {sequenceName: (seq.name || "")}]); // Fallback to "" to let L20n handle localization of the default word "Sequence"
       dispatch(saveSequenceOk(resp.data));
     },
     function(err: { data: Error; }) {

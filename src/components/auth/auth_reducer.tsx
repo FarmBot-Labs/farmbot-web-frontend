@@ -8,7 +8,7 @@ let action_handlers = {
     return state;
   },
   LOGIN_ERR: function(state, action) {
-    error("error-m-ERR_AUTH_FAIL");
+    error("error-m-LOGIN_ERR");
     return _.assign({},
                     state,
                     { token: "",

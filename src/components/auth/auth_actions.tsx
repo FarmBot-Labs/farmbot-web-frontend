@@ -98,7 +98,7 @@ export function onRegistrationErr(dispatch) {
   return (err) => {
     let msg = _.values(err.data)
                .join(". ")
-               .replace(/nil/g, "empty") || "Unknown server error.";
+               .replace(/nil/g, "empty") || "error-m-ERR_SERVER_UNKNOWN";
     error(msg);
     dispatch({
       type: "REGISTRATION_ERROR",

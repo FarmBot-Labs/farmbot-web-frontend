@@ -17,7 +17,7 @@ export function fetchPlants(baseUrl: string, token: string) {
         dispatch({ type: "FETCH_PLANTS_OK", payload });
       })
       .catch((payload) => {
-        error("Tried to download plants, but couldn't.");
+        error("error-m-FETCH_PLANTS_ERR");
         dispatch({ type: "FETCH_PLANTS_ERR", payload });
       });
 
@@ -35,7 +35,7 @@ export function savePlant(plant: Plant, baseUrl: string, token: string) {
         dispatch({ type: "SAVE_PLANT_OK", payload });
       })
       .catch((payload) => {
-        error("Tried to save plant, but couldn't.");
+        error("error-m-SAVE_PLANT_ERR");
         dispatch({ type: "SAVE_PLANT_ERR", payload });
       });
   };
@@ -51,7 +51,7 @@ export function destroyPlant(plant: Plant, baseUrl: string, token: string) {
         dispatch({ type: "DESTROY_PLANT_OK", payload });
       })
       .catch((payload) => {
-        error("Tried to delete plant, but couldn't.");
+        error("error-m-DESTROY_PLANT_ERR");
         dispatch({ type: "DESTROY_PLANT_ERR", payload });
       });
   };

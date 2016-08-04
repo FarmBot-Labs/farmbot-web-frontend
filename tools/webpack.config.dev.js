@@ -2,6 +2,9 @@ var path = require('path');
 var open = require('open');
 
 module.exports = {
+  node: {
+	  fs: 'empty'
+  },
   module: {
     loaders: [{
       test: /\.tsx?$/,

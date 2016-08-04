@@ -34,8 +34,7 @@ export function setTimeOffset(time: string /**  time string with format `hh:mm a
         .reduce((num, acc) => num + acc);
 
     if (_.isNaN(milliseconds) || !_.isNumber(milliseconds)) {
-        let m = "Expected regimen time offset to follow format of '12:34 pm'";
-        warning(m, "Bad Input");
+        warning("warning-m-TIME_OFFSET_ERROR", "warning-t-TIME_OFFSET_ERROR");
         return {
             type: "TIME_OFFSET_ERROR",
             payload: 0
@@ -76,7 +75,7 @@ export function commitBulkEditor(state: BulkSchedulerState):
     ReduxAction<BulkSchedulerOutput|{}> {
 
     if (!state.sequence) {
-      warning("Select a sequence from the dropdown first.");
+      warning("warning-m-COMMIT_BULK_EDITOR_FAILURE");
       return {
         type: "COMMIT_BULK_EDITOR_FAILURE",
         payload: {}

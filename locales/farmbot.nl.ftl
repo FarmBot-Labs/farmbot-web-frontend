@@ -2,7 +2,7 @@
 # FarmBot localization uses the Mozilla L20n project.
 # Visit http://l20n.org/learn/ for more information.
 # --------------------------------------------------- #
-# Localization: nl-NL (Nederlands)
+# Localization: nl (Nederlands (Dutch))
 # Localized by: Marc Dingena, https://github.com/mdingena
 # --------------------------------------------------- #
 
@@ -21,11 +21,11 @@ CAPTION_undef = ---
 [[Navigation Bar]]
 
 nav-sync           = Sync
-nav-logout         = Uitloggen
 nav-e-stop         = Noodstop
+nav-logout         = Uitloggen
 nav-link-designer  = Ontwerper
 nav-link-controls  = Besturing
-nav-link-devices   = Apparaat
+nav-link-devices   = Apparatuur
 nav-link-sequences = Instructiesets
 nav-link-regimens  = Regimes
 
@@ -70,31 +70,32 @@ register-submit          = Creëer Account
 
 controls-move-header = Verplaatsen
 controls-move-help   =
-  | Use these manual
-  | control buttons to move FarmBot in realtime. Press the
-  | arrows for relative movements or type in new
-  | coordinates and press <strong>GO</strong> for an
-  | absolute movement. Tip: Press the Home button when
-  | you are done so FarmBot is ready to get back to work.
-  | Note: Currently all buttons except for Home work.
+  | Gebruik deze knoppen om FarmBot handmatig direct aan te
+  | sturen. Druk op de pijlen voor relatieve verplaatsing of
+  | voer nieuwe coördinaten in en druk op <strong>{ controls-move-go }</strong> voor absolute
+  | verplaatsing. Tip: Druk op de { controls-move-home } knop wanneer u klaar
+  | bent zodat FarmBot zich gereed maakt om zijn werk te
+  | vervolgen.
+  | NB: Momenteel werken alle knoppen behalve { controls-move-home }.
 controls-move-e-stop = Noodstop
 controls-move-amount = Verplaatsafstand (mm)
 controls-move-axis-x = X-As
 controls-move-axis-y = Y-As
 controls-move-axis-z = Z-As
 controls-move-go     = Ga
+controls-move-home   = Home
 
 
 [[Controls Page, Tools Widget]]
 
 controls-tools-header = Koppelstukken
 controls-tools-help   =
-  | Use these toggle           
-  | switches to control FarmBot's tools and peripherals
-  | in realtime. To edit and create new tools, press
-  | the <strong>{ controls-tools-button-edit }</strong> button. Make sure to turn
-  | things off when you're done! Coming soon: a working
-  | edit button.
+  | Gebruik deze schakelknoppen om FarmBot's koppelstukken
+  | en randapparatuur direct aan te sturen. Druk op <strong>{ controls-tools-edit }</strong>
+  | om koppelstukken te bewerken of aan te maken. Denk eraan
+  | deze instellingen te herstellen wanneer u klaar bent met
+  | uw handmatige handelingen!
+  | Binnenkort: een werkende { controls-tools-edit } knop.
 controls-tools-edit   = Wijzig
 controls-tools-pin    = Pin { $pinId }
 
@@ -110,10 +111,10 @@ controls-tools-tool-led         = LED
 
 controls-camera-header = Camera
 controls-camera-help   =
-  | Press the <strong>{ controls-camera-url-button-edit }
-  | </strong> button to add the URL of a livestream of
-  | your FarmBot. Coming soon: A working edit button and
-  | the ability to save your webcam URL in the backend.
+  | Druk op <strong>{ controls-camera-edit }</strong> om de URL van een live-stream van uw
+  | FarmBot toe te voegen.
+  | Binnenkort: een werkende { controls-camera-edit } knop en de mogelijkheid
+  | om uw webcam URL in de server op te slaan.
 controls-camera-edit   = Wijzig
 controls-camera-url    = Webcam URL:
 
@@ -122,11 +123,12 @@ controls-camera-url    = Webcam URL:
 
 sequences-commands-header    = Commando's
 sequences-commands-help      =
-  | These commands are
-  | the most basic things FarmBot can do. Combine them into
-  | sequences to create more complex operations for
-  | watering, planting seeds, measuring soil properties,
-  | and more. Coming soon: drag and drop commands!
+  | Deze commando's zijn de meest eenvoudige dingen die
+  | FarmBot kan doen. Combineer deze om instructiesets te
+  | maken die samen complexe handelingen uitvoeren voor
+  | bijvoorbeeld planten water geven, zaden planten,
+  | grondmetingen en meer.
+  | Binnenkort: commando's klikken-en-slepen!
 sequences-commands-move-abs  = Verplaats Absoluut
 sequences-commands-move-rel  = Verplaats Relatief
 sequences-commands-pin-write = Schrijf Pin
@@ -141,10 +143,9 @@ sequences-commands-execute   = Uitvoeren
 
 sequences-editor-header       = Instructieset Bewerken
 sequences-editor-help         =
-  | Use this widget to edit
-  | sequences. Coming soon: drag and drop steps,
-  | custom step names, sequence cloning, and inheritable
-  | step properties!
+  | Gebruik dit venster voor het bewerken van instructiesets.
+  | Binnenkort: stappen klikken-en-slepen, stappen hernoemen,
+  | instructiesets klonen en erfbare stapeigenschappen!
 sequences-editor-save         = Opslaan
 sequences-editor-save-dirty   = Opslaan *
 sequences-editor-test         = Test
@@ -218,18 +219,19 @@ sequences-step-execute-sequence-placeholder = Kies een instructieset (of sla een
 
 sequences-list-header = Instructiesets
 sequences-list-help   =
-  | Here is the list of
-  | all of your sequences. Click one to edit. Coming soon:
-  | sequence cloning and custom colors!
+  | Dit is een lijst van al uw instructiesets. Klik op
+  | een set om deze te bewerken.
+  | Binnenkort: instructiesets klonen en instelbare kleuren!
 sequences-list-add    = Toevoegen
+sequences-list-new    = Nieuwe Instructieset
 
 
 [[Regimens Page, Scheduler Widget]]
 
 regimens-scheduler-header          = Planner
 regimens-scheduler-help            =
-  | Use this tool to schedule
-  | a sequence to run on many days of your regimen.
+  | Gebruik de planner om instructiesets op bepaalde dagen
+  | en tijdstippen in te plannen in uw regime.
 regimens-scheduler-add             = Toevoegen
 regimens-scheduler-sequence-label  = Instructieset
 regimens-scheduler-sequence-select = Selecteer Instructieset
@@ -243,13 +245,14 @@ regimens-scheduler-week-button     = Week
 
 regimens-editor-header = Regime Bewerken
 regimens-editor-help =
-  | Regimens allow FarmBot
-  | to take care of a plant throughout its entire life. A
-  | regimen consists of many sequences that are scheduled to run
-  | based on the age of the plant. Regimens are applied to
-  | plants from the farm designer and can be re-used on many
-  | plants growing at the same or different times. Multiple
-  | regimens can be applied to any one plant. Coming soon: Regimens!
+  | Met regimes kan FarmBot zorg dragen voor een plant gedurende
+  | diens gehele levenscyclus. Een regime bestaat uit vele
+  | instructiesets die op basis van de leeftijd van een plant zijn
+  | gepland om uit te voeren. Regimes worden op planten toegepast
+  | vanuit de tuinontwerper en kunnen worden hergebruikt voor
+  | planten die op dezelfde of verschillende tijden groeien.
+  | Op een plant kunnen meerdere regimes worden toegepast.
+  | Binnenkort: regimes!
 regimens-editor-save       = Opslaan
 regimens-editor-save-dirty = Opslaan *
 regimens-editor-delete     = Verwijder
@@ -263,6 +266,61 @@ regimens-editor-day        = Dag { $dayNumber }
 
 regimens-list-header = Regimes
 regimens-list-help   =
-  | This is a list of all
-  | of your regimens. Coming soon: Regimens, and regimen cloning!
+  | Dit is een lijst van al uw regimes.
+  | Binnenkort: Regimes, en regimes klonen!
 regimens-list-add    = Toevoegen
+
+
+# Some Toastr messages do not have their own localized title.
+# FarmBot will use the default [Success|Warning|Error] titles in those cases.
+# Titles are denoted with -t- and messages are denoted with -m-
+[[Toastr Messages, Success]]
+
+success-t-default          = Succes
+success-m-SAVE_DEVICE_OK   = Apparaat opgeslagen.
+success-m-SAVE_SEQUENCE_OK = { LEN( $sequenceName ) ->
+                               [0] Instructieset
+                              *[_] "{ $sequenceName }"
+                             } opgeslagen.
+
+
+# Titles are denoted with -t- and messages are denoted with -m-
+[[Toastr Messages, Warning]]
+
+warning-t-default                    = Waarschuwing
+warning-m-COMMIT_BULK_EDITOR_FAILURE = Kies eerst een instructieset uit de keuzelijst.
+warning-t-FETCH_DEVICE_ERR           = Geen apparaat gevonden!
+warning-m-FETCH_DEVICE_ERR           = U moet een apparaat aan uw account toevoegen.
+warning-t-TIME_OFFSET_ERROR          = Slechte Invoer
+warning-m-TIME_OFFSET_ERROR          = Het verwachte formaat van regime tijdstippen is '12:34 pm'
+warning-t-UNKNOWN_MESSAGE            = Ongeldig Bericht
+warning-m-UNKNOWN_MESSAGE            = FarmBot stuurde een onbekend bericht. Zie log voor details.
+
+
+# Titles are denoted with -t- and messages are denoted with -m-
+[[Toastr Messages, Error]]
+
+error-t-default             = Foutmelding
+error-t-COMMAND_ERR         = FarmBot heeft dat niet begrepen!
+error-m-COMMAND_ERR         = { LEN( $payload ) ->
+                                [0] Commando
+                               *[_] { $payload } verzoek
+                              } is mislukt.
+error-m-DELETE_SEQUENCE_ERR = Kan instructieset niet verwijderen.
+error-m-DESTROY_PLANT_ERR   = Kon plant niet verwijderen.
+error-m-ERR_AUTH_FAIL       = Authenticatie mislukt!
+error-m-ERR_SERVER_UNKNOWN  = Onbekende server-fout!
+error-m-EXEC_SEQUENCE_OK    = Kon instructieset niet uitvoeren. Zie log voor details.
+error-m-FETCH_DEVICE_ERR    = Kan apparaatgegevens niet downloaden van de server. Controleer uw netwerkverbinding.
+error-m-FETCH_PLANTS_ERR    = Kon planten niet downloaden.
+error-m-FETCH_SEQUENCE_NO   = Kon instructiesets niet downloaden.
+error-t-PIN_TOGGLE_ERR      = Fout tijdens schakelen van pin
+error-m-PIN_TOGGLE_ERR      = Herlaad uw browservenster of herstart de apparatuur.
+error-t-READ_STATUS_ERR     = Kan status niet uitlezen
+error-m-READ_STATUS_ERR     = Heeft u uw bot geconfigureerd? Is deze online?
+error-m-SAVE_DEVICE_ERR     = Kon apparaat niet opslaan.
+error-m-SAVE_DEVICE_ERR     = Fout tijdens opslaan van apparaat.
+error-m-SAVE_PLANT_ERR      = Kon plant niet opslaan.
+error-m-SAVE_SEQUENCE_NO    = Kon { $sequenceName } niet opslaan.{ $msg }
+error-t-SETTING_TOGGLE_ERR  = Fout tijdens schakelen van instelling
+error-m-SETTING_TOGGLE_ERR  = Herlaad uw browservenster of herstart de apparatuur.

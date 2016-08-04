@@ -47,7 +47,7 @@ let EStopButton = ({auth, dispatch}: NavButtonState) => {
 let links = {
   "Farm Designer" : { "url" : "/app/dashboard/designer",  "l10n" : "designer" },
   "Controls"      : { "url" : "/app/dashboard/controls",  "l10n" : "controls" },
-  "Device"        : { "url" : "/app/dashboard/devices",   "l10n" : "devices" },
+  "Devices"       : { "url" : "/app/dashboard/devices",   "l10n" : "devices" },
   "Sequences"     : { "url" : "/app/dashboard/sequences", "l10n" : "sequences" },
   "Regimens"      : { "url" : "/app/dashboard/regimens",  "l10n" : "regimens" }
 };

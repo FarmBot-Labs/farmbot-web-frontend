@@ -13,7 +13,7 @@ import { randomColor } from "../../util";
 export function nullSequence(): Sequence {
   return {
     color: randomColor(),
-    name: "New Sequence",
+    name: "New Sequence", // TODO: l10n-id="sequences-list-new"
     steps: [],
     dirty: false
   };
@@ -47,7 +47,7 @@ export function fetchSequences() {
       .then(({data}) => {
         dispatch(fetchSequencesOk(data));
       }, (e: Error) => {
-        error("Could not download sequences");
+        error("error-m-FETCH_SEQUENCE_NO");
         dispatch(fetchSequencesNo(e));
       });
   };
@@ -126,12 +126,12 @@ export function saveSequence(sequence: Sequence) {
     return method(url, sequence, authHeaders(token))
     .then(function(resp: {data: Sequence; }) {
       let seq: Sequence = resp.data;
-      success(`Saved ${("'" + seq.name + "'") || "sequence"}`);
+      success(["success-m-SAVE_SEQUENCE_OK", {sequenceName: seq.name}]);
       dispatch(saveSequenceOk(resp.data));
     },
     function(err: { data: Error; }) {
-      let msg: string = _.values(err.data).join("\n");
-      error(`Unable to save ${ ("'" + sequence.name + "'") }.` + msg);
+      let msg: string = _.values(err.data).join("\n"); // TODO: localize `msg`
+      error(["error-m-SAVE_SEQUENCE_NO", {sequenceName: sequence.name, msg: msg}]);
       dispatch(saveSequenceNo(error));
     });
   };
@@ -195,7 +195,7 @@ function confirmDeletion(dispatch: Function, getState: Function) {
   handler({ sequence, iss, token }).then(() => {
     dispatch(deleteSequenceOk(sequence, index));
   }, () => {
-      error("Unable to delete sequence");
+      error("error-m-DELETE_SEQUENCE_ERR");
       dispatch({type: "DELETE_SEQUENCE_ERR", payload: {}});
   });
 }

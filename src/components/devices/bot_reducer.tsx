@@ -125,11 +125,10 @@ export let botReducer = generateReducer<BotState>(initialState)
   })
   .add<any>("FETCH_DEVICE_ERR", function(state, action) {
     if (action.payload.status === 404) {
-      warning("You need to add a device to your account.",
-        "No device found!");
+      warning("warning-m-FETCH_DEVICE_ERR",
+        "warning-t-FETCH_DEVICE_ERR");
     } else {
-      error("Unable to download device data from server. " +
-        "Check your internet connection.");
+      error("error-m-FETCH_DEVICE_ERR");
     };
     return _.assign<any, BotState>({},
       state, {
@@ -141,17 +140,17 @@ export let botReducer = generateReducer<BotState>(initialState)
       case 422:
         let errors = _.map(action.payload.responseJSON, v => v)
           .join(". ");
-        error(errors, "Couldn\'t save device.");
+        error(errors, "error-t-SAVE_DEVICE_ERR"); // TODO: localize `errors`
         break;
       default:
-        error("Error while saving device.");
+        error("error-m-SAVE_DEVICE_ERR");
         break;
     }
     return state;
   })
   .add<any>("SAVE_DEVICE_OK", function(state, action) {
     // TODO Move this into the action creator. Does not belong in a reducer.
-    success("Device saved.");
+    success("success-m-SAVE_DEVICE_OK");
     return _.assign<any, BotState>({}, state, action.payload, {
       dirty: false
     });

@@ -27,7 +27,7 @@ export function settingToggleOk(res) {
 }
 
 export function settingToggleErr(err) {
-    error("Refresh browser or restart devices.", "Error while toggling setting");
+    error("error-m-SETTING_TOGGLE_ERR", "error-t-SETTING_TOGGLE_ERR");
     return {
         type: "SETTING_TOGGLE_ERR",
         payload: {}
@@ -55,7 +55,7 @@ export function pinToggleOk(res) {
 }
 
 export function pinToggleErr(err) {
-    error("Refresh browser or restart devices.", "Error while toggling pin");
+    error("error-m-PIN_TOGGLE_ERR", "error-t-PIN_TOGGLE_ERR");
     return {
         type: "PIN_TOGGLE_ERR",
         payload: {}
@@ -163,7 +163,7 @@ function readStatusOk(status) {
 }
 
 function readStatusErr(msg) {
-    error("Did you configure your bot? Is it online?", "Can't read status");
+    error("error-m-READ_STATUS_ERR", "error-t-READ_STATUS_ERR");
     return {
       type: "READ_STATUS_ERR",
       payload: msg
@@ -212,8 +212,8 @@ function sendCommandOk(res, payload, dispatch) {
 }
 
 function sendCommandErr(e, payload, dispatch) {
-    let msg = (payload.name || "Command") + " request failed.";
-    error(msg, "Farmbot Didn't Get That!");
+    let msg = ["error-m-COMMAND_ERR", {payload: (payload.name || "")}]; // Fallback to "" to let L20n handle localization of the default word "Command"
+    error(msg, "error-t-COMMAND_ERR");
     dispatch({ type: "COMMAND_ERR", payload: e });
 }
 
@@ -264,8 +264,8 @@ function botNotification(statusMessage) {
 }
 
 function unknownMessage(statusMessage: any) {
-  warning("FarmBot sent an unknown message. See log for details.",
-          "Malformed Message");
+  warning("warning-m-UNKNOWN_MESSAGE",
+          "warning-t-UNKNOWN_MESSAGE");
   console.dir(statusMessage);
   return {
     type: "UNKNOWN_MESSAGE",
@@ -293,7 +293,7 @@ export function execSequence(sequence: Sequence) {
                  // should be returning type Error, never string!
                  console.dir(e);
                  dispatch(botError({
-                   error: "Unable to execute sequence. See log for details.",
+                   error: "error-m-EXEC_SEQUENCE_OK",
                    method: "TODO: Fix Farmbotjs timer defer rejection"
                  }));
                });

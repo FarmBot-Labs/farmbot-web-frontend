@@ -437,6 +437,12 @@ declare namespace NodeJS {
     }
 }
 
+declare interface Document {
+	l10n: {
+		get: any // should be Localization but need to figure out TypeScript typings for that.
+	}
+}
+
 /**
  * @deprecated
  */

@@ -2,7 +2,7 @@
 # FarmBot localization uses the Mozilla L20n project.
 # Visit http://l20n.org/learn/ for more information.
 # --------------------------------------------------- #
-# Localization: en-US (English, United States; default)
+# Localization: en (English (fallback based on en-US))
 # Localized by: Rory Aronson, https://github.com/roryaronson
 #               Rick Carlino, https://github.com/RickCarlino
 #               Marc Dingena, https://github.com/mdingena

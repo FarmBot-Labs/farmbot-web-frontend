@@ -336,8 +336,10 @@ const showUrl = (url: string, dirty: boolean) => {
     return <p> Press save to view.</p>;
   } else {
     if (~url.indexOf("/webcam_url_not_set.jpeg")) {
-      return <img className="webcam-stream-unavailable" src={url}/>;
-      //TODO: add text over image: "Camera stream not available. Press <b>EDIT</b> to add a stream"
+      return <div className="webcam-stream-unavailable">
+                <img src={url}/>
+                <text>Camera stream not available.<br/>Press <b>EDIT</b> to add a stream.</text>
+             </div>;
     } else {
       return <img className="webcam-stream" src={url}/>;
     };

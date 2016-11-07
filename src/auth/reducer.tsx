@@ -22,6 +22,8 @@ export let authReducer = generateReducer<AuthState>(initialState)
   })
   .add<AuthState>("LOGIN_OK", function (s, a) {
     _.assign(s, a.payload, { authenticated: true });
+    // TODO: Side effects don't belong in reducers.
+    // Move this into an action creator.
     localStorage["token"] = JSON.stringify(s);
     return s;
   })

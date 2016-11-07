@@ -44,7 +44,7 @@ export function updatePeripheral({index, peripheral}: UpdatePeripheral):
 };
 
 export function destroyPeripheral(payload: IndexedPeripheral) {
-    return function (dispatch: Function, getState: () => Everything) {
+    return function(dispatch: Function, getState: () => Everything) {
         let state = getState();
         let id = payload.peripheral.id;
         function remove() {
@@ -65,12 +65,12 @@ export function destroyPeripheral(payload: IndexedPeripheral) {
 }
 
 export function saveAll() {
-    return function (dispatch: Function, getState: () => Everything) {
+    return function(dispatch: Function, getState: () => Everything) {
         let state = getState();
         axios
             .post<Peripheral[]>(peripheralUrl(state.auth.iss),
             { peripherals: state.peripherals.all })
-            .then(function (x) {
+            .then(function(x) {
                 devices.current.sync();
                 dispatch({
                     type: "REPLACE_PERIPHERALS",
@@ -82,17 +82,17 @@ export function saveAll() {
 }
 
 function handleError(defaultMsg: string) {
-    return function (x: any) {
+    return function(x: any) {
         let message = _.get(x, "response.data.error", t(defaultMsg));
         error(message);
     };
 }
 
 export function fetchPeripherals(baseUrl: string) {
-    return function (dispatch: Function) {
+    return function(dispatch: Function) {
         axios
             .get(peripheralUrl(baseUrl))
-            .then(function (x) {
+            .then(function(x) {
                 dispatch({
                     type: "REPLACE_PERIPHERALS",
                     payload: x.data

@@ -25,8 +25,13 @@ import { FarmDesigner } from "./farm_designer/farm_designer";
 import { Login } from "./login";
 import { store } from "./redux/store";
 import { history } from "./history";
+import { Store } from "./redux/interfaces";
 
-export class RootComponent extends React.Component<any, any> {
+interface RootComponentProps {
+  store: Store;
+}
+
+export class RootComponent extends React.Component<RootComponentProps, {}> {
 
   requireAuth(nextState: RouterState, replace: RedirectFunction) {
     // Why didn't I just write this.props.auth here...?

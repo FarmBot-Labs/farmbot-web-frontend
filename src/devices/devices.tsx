@@ -104,7 +104,7 @@ export class ConfigInputBox extends React.Component<any, any> {
     }
 
     change(key: string, dispatch: Function) {
-        return function(event: React.FormEvent<HTMLInputElement>) {
+        return function (event: React.FormEvent<HTMLInputElement>) {
             let formInput = event.currentTarget.value;
             dispatch(changeConfigBuffer({ [key]: Number(formInput) }));
         };
@@ -140,7 +140,7 @@ export class McuInputBox extends React.Component<any, any> {
     }
 
     change(key: any, dispatch: Function) {
-        return function(event: React.FormEvent<HTMLInputElement>) {
+        return function (event: React.FormEvent<HTMLInputElement>) {
             let formInput = event.currentTarget.value;
             dispatch(changeSettingsBuffer(key, formInput));
         };

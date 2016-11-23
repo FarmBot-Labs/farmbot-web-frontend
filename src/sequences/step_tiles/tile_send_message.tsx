@@ -10,10 +10,10 @@ import { addChan, removeChan } from "../actions";
 
 let channels = _.pairs<{}, string>({
     "ticker": "Ticker",
-    "ticker_error": "Ticker (Error)",
-    "toast_success": "Toast (Success)",
-    "toast_error": "Toast (Error)",
-    "toast_warning": "Toast (Warning)"
+    "error_ticker": "Ticker (Error)",
+    "success_toast": "Toast (Success)",
+    "error_toast": "Toast (Error)",
+    "warning_toast": "Toast (Warning)"
 });
 
 let handleChange = (channel_name: string, index: number, dispatch: Function) =>
@@ -54,7 +54,7 @@ export function TileSendMessage({dispatch, step, index}: StepParams) {
                         <Help text={(`The Send Message step instructs FarmBot to
                       send a custom message to the logs. This can help you with
                       debugging your sequences. Eventually you will be able to
-                      receive push notifications and email alerts of these 
+                      receive push notifications and email alerts of these
                       messages!`)} />
                     </div>
                 </div>

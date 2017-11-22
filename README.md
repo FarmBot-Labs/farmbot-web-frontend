@@ -1,5 +1,5 @@
-##DEPRECATED:
+# DEPRECATED - Do Not Install!
 
 This repo has been merged with the api.
 
-See [https://github.com/RickCarlino/farmbot-web-app/tree/master/frontend](here).
+See [this repo instead](https://github.com/FarmBot/Farmbot-Web-App).
